@@ -9,6 +9,9 @@
     <!-- Laravel CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('plugin/bootstrap-4.1.1-dist/css/bootstrap.min.css') }}">
+
     <title>{{ config('app.name') }}</title>
     <link rel="shortcut icon" href="/favicon.ico">
 </head>
@@ -31,8 +34,13 @@
     <noscript><center>Please enable Javascript in your browser settings to view full site!</center></noscript>
 
     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
     <!-- jquery-3.3.1 -->
     <script src="{{ asset('plugin/jquery-3.3.1/jquery-3.3.1.min.js') }}"></script>
+
+    <!-- bootstrap, bootstrap.bundle.min.js already included popper.min.js -->
+    <script src="{{ asset('plugin/bootstrap-4.1.1-dist/js/bootstrap.bundle.min.js') }}"></script>
 
     <script type="text/javascript">
         // if JavaScript enabled, show #bodyWrapper
