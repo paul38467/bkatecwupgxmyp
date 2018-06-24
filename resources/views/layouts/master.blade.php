@@ -12,6 +12,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('plugin/bootstrap-4.1.1-dist/css/bootstrap.min.css') }}">
 
+    <!-- Bootstrap Document bdcallout CSS -->
+    <link rel="stylesheet" href="{{ asset('my_asset/bootstrap-4.1.1-bdcallout.css') }}">
+
     <!-- Font Awesome 4.7.0 -->
     <link rel="stylesheet" href="{{ asset('plugin/font-awesome-4.7.0/css/font-awesome.min.css') }}">
 

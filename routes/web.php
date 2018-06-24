@@ -19,6 +19,10 @@ Route::prefix('test-views')->group(function () {
     Route::get('layouts', function () {
         return view('test_views.layouts');
     });
+
+    Route::get('bdcallout', function () {
+        return view('test_views.bdcallout');
+    });
 });
 
 Auth::routes();
