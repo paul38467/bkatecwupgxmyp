@@ -12,9 +12,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('plugin/bootstrap-4.1.1-dist/css/bootstrap.min.css') }}">
 
-    <!-- Bootstrap callout CSS -->
-    <link rel="stylesheet" href="{{ asset('my_asset/bootstrap-4.1.1-callout.css') }}">
-
     <!-- Font Awesome 4.7.0 -->
     <link rel="stylesheet" href="{{ asset('plugin/font-awesome-4.7.0/css/font-awesome.min.css') }}">
 
@@ -24,16 +21,16 @@
 <body>
     <!-- show bodyWrapper if JavaScript enabled -->
     <div id="bodyWrapper" style="display: none">
-        @include('layouts.blocks.navbar')
+        @include ('layouts.blocks.navbar')
         <hr>
 
-        @yield('content')
+        @yield ('content')
         <hr>
 
-        @include('layouts.blocks.sidebar')
+        @include ('layouts.blocks.sidebar')
         <hr>
 
-        @include('layouts.blocks.footer')
+        @include ('layouts.blocks.footer')
         <hr>
     </div><!-- /#bodyWrapper -->
 

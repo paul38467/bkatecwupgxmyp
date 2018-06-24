@@ -1,5 +1,5 @@
-@extends('layouts.master')
+@extends ('layouts.master')
 
-@section('content')
+@section ('content')
 This is layouts_test.blade.php content
 @endsection
