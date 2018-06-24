@@ -15,7 +15,7 @@
     <!-- Font Awesome 4.7.0 -->
     <link rel="stylesheet" href="{{ asset('plugin/font-awesome-4.7.0/css/font-awesome.min.css') }}">
 
-    <title>{{ config('app.name') }}</title>
+    <title>{{ config('app.name') }} - @yield('page_title')</title>
     <link rel="shortcut icon" href="/favicon.ico">
 </head>
 <body>
