@@ -15,8 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/layouts-test', function () {
-    return view('layouts_test');
+Route::prefix('test-views')->group(function () {
+    Route::get('layouts', function () {
+        return view('test_views.layouts');
+    });
 });
 
 Auth::routes();
