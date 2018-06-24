@@ -21,16 +21,16 @@
 <body>
     <!-- show bodyWrapper if JavaScript enabled -->
     <div id="bodyWrapper" style="display: none">
-        @include ('layouts.blocks.navbar')
+        @include('layouts.blocks.navbar')
         <hr>
 
-        @yield ('content')
+        @yield('content')
         <hr>
 
-        @include ('layouts.blocks.sidebar')
+        @include('layouts.blocks.sidebar')
         <hr>
 
-        @include ('layouts.blocks.footer')
+        @include('layouts.blocks.footer')
         <hr>
     </div><!-- /#bodyWrapper -->
 
