@@ -16,13 +16,8 @@ Route::get('/', function () {
 });
 
 Route::prefix('test-views')->group(function () {
-    Route::get('layouts', function () {
-        return view('test_views.layouts');
-    });
-
-    Route::get('bdcallout', function () {
-        return view('test_views.bdcallout');
-    });
+    Route::view('layouts', 'test_views.layouts');
+    Route::view('bdcallout', 'test_views.bdcallout');
 });
 
 Auth::routes();
