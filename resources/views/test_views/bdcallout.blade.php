@@ -8,15 +8,15 @@
 
     <!-- create and use blade alias component -->
     <p>create and use blade alias component:</p>
-    @bdcallout(['color' => 'primary'])
+    @component('components.bdcallout', ['color' => 'primary'])
         <h4>Primary Callout - use blade alias component</h4>
         <p>without icon</p>
-    @endbdcallout
+    @endcomponent
 
-    @bdcallout(['color' => 'secondary', 'icon' => 'fa-exclamation-circle'])
+    @component('components.bdcallout', ['color' => 'secondary', 'icon' => 'fa-exclamation-circle'])
         <h4>Secondary Callout - use blade alias component</h4>
         <p>with icon <code class="highlighter-rouge">fa-exclamation-circle</code></p>
-    @endbdcallout
+    @endcomponent
 
     <!-- Types Color -->
     <p>Types Color:</p>
