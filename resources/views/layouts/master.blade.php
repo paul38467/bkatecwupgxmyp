@@ -25,6 +25,7 @@
     <!-- show bodyWrapper if JavaScript enabled -->
     <div id="bodyWrapper" style="display: none">
         @include('layouts.blocks.navbar')
+        <hr>
 
         @yield('content')
         <hr>
