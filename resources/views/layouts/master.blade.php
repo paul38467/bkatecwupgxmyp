@@ -35,13 +35,13 @@
             <div class="row">
 
                 <!-- start content -->
-                <div class="col-12 col-lg-10">
+                <div class="col-12 col-lg-10 my-content-pt">
                     @yield('content')
                 </div><!-- /.col -->
                 <!-- end content -->
 
                 <!-- start sidebar -->
-                <div class="col-6 col-lg-2">
+                <div class="col-6 col-lg-2 my-sidebar-pt">
                     <div class="sticky-top">
                         <h4>sticky-top div</h4>
                         @include('layouts.blocks.sidebar')
