@@ -9,6 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('plugin/bootstrap-4.1.1-dist/css/bootstrap.min.css') }}">
 
+    <!-- my_style.css -->
+    <link rel="stylesheet" href="{{ asset('my_asset/my_style.css') }}">
+
     <title>{{ config('app.name') }} - @yield('page_title')</title>
     <link rel="shortcut icon" href="/favicon.ico">
 </head>
