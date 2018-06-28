@@ -18,23 +18,43 @@
     <!-- Font Awesome 4.7.0 -->
     <link rel="stylesheet" href="{{ asset('plugin/font-awesome-4.7.0/css/font-awesome.min.css') }}">
 
+    <!-- my_style.css -->
+    <link rel="stylesheet" href="{{ asset('my_asset/my_style.css') }}">
+
     <title>{{ config('app.name') }} - @yield('page_title')</title>
     <link rel="shortcut icon" href="/favicon.ico">
 </head>
 <body>
     <!-- show bodyWrapper if JavaScript enabled -->
     <div id="bodyWrapper" style="display: none">
+        <!-- start navbar -->
         @include('layouts.blocks.navbar')
-        <hr>
+        <!-- end navbar -->
 
-        @yield('content')
-        <hr>
+        <main role="main" class="container-fluid">
+            <div class="row">
 
-        @include('layouts.blocks.sidebar')
-        <hr>
+                <!-- start content -->
+                <div class="col-12 col-lg-10">
+                    @yield('content')
+                </div><!-- /.col -->
+                <!-- end content -->
 
-        @include('layouts.blocks.footer')
-        <hr>
+                <!-- start sidebar -->
+                <div class="col-6 col-lg-2">
+                    <div class="sticky-top">
+                        <h4>sticky-top div</h4>
+                        @include('layouts.blocks.sidebar')
+                    </div><!-- /.sticky-top -->
+                </div><!-- /.col -->
+                <!-- end sidebar -->
+
+            </div><!-- /.row -->
+        </main>
+
+        <!-- start footer -->
+        {{-- @include('layouts.blocks.footer') --}}
+        <!-- end footer -->
     </div><!-- /#bodyWrapper -->
 
     <noscript><center>Please enable Javascript in your browser settings to view full site!</center></noscript>
