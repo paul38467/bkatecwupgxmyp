@@ -6,8 +6,8 @@
 <div class="container">
     <h3>Test component bdcallout</h3>
 
-    <!-- create and use blade alias component -->
-    <p>create and use blade alias component:</p>
+    <!-- use blade component -->
+    <p>use blade component:</p>
     @component('components.bdcallout', ['color' => 'primary'])
         <h4>Primary Callout - use blade alias component</h4>
         <p>without icon</p>
