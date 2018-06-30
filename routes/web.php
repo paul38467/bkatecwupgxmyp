@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Route::view('/test-views/test-layouts', 'test_views.test_layouts');
 Route::view('/test-views/test-bdcallout', 'test_views.test_bdcallout');
+Route::view('/test-views/test-alert', 'test_views.test_alert');
 Route::view('/test-views/test-alert-with', 'test_views.test_alert_with');
 
 Auth::routes();
