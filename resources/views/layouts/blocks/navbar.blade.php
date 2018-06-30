@@ -26,6 +26,17 @@
                 </div>
             </li>
 
+            <!-- navbar dropdown - navbarTestViews -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarTestViews" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Test Views</a>
+                <div class="dropdown-menu" aria-labelledby="navbarTestViews">
+                    <a class="dropdown-item" href="{{ asset('/test-views/test-layouts') }}">test-layouts</a>
+                    <a class="dropdown-item" href="{{ asset('/test-views/test-bdcallout') }}">test-bdcallout</a>
+                    <a class="dropdown-item" href="{{ asset('/test-views/test-alert') }}">test-alert</a>
+                    <a class="dropdown-item" href="{{ asset('/test-views/test-alert-with') }}">test-alert-with</a>
+                </div>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Disabled</a>
             </li>
