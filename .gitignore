@@ -29,3 +29,5 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+/config/cfg.php
