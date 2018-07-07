@@ -37,9 +37,14 @@
                 </div>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+            <!-- navbar dropdown - navbarManagement -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarManagement" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">管理</a>
+                <div class="dropdown-menu" aria-labelledby="navbarManagement">
+                    <a class="dropdown-item" href="{{ route('region.index') }}">地區管理</a>
+                </div>
             </li>
+
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

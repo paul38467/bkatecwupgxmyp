@@ -20,6 +20,8 @@ Route::view('/test-views/test-bdcallout', 'test_views.test_bdcallout');
 Route::view('/test-views/test-alert', 'test_views.test_alert');
 Route::view('/test-views/test-alert-with', 'test_views.test_alert_with');
 
+Route::resource('region', 'RegionController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
