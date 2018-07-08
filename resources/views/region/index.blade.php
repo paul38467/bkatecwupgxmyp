@@ -38,9 +38,9 @@
                     <tr>
                         <th scope="row">{{ $region->id }}</th>
                         <td><i class="fa fa-flag fa-fw text-success"></i> {{ $region->region_name }}</td>
-                        <td>{{ $region->artist_total }}</td>
-                        <td>{{ $region->av_total }}</td>
-                        <td>{{ $region->movie_total }}</td>
+                        <td>{{ $region->artist_count }}</td>
+                        <td>{{ $region->av_count }}</td>
+                        <td>{{ $region->movie_count }}</td>
                         <td>
                             <a class="btn btn-primary btn-sm" href="{{ route('region.edit', $region) }}">
                                 <i class="fa fa-edit fa-lg"></i> 編輯

@@ -33,13 +33,13 @@
                 @if ($region->category_data_total)
                     <div class="row text-left mb-3">
                         <div class="col-2">藝人：</div>
-                        <div class="col">{{ $region->artist_total }} 筆資料</div>
+                        <div class="col">{{ $region->artist_count }} 筆資料</div>
                         <div class="w-100"></div>
                         <div class="col-2">AV：</div>
-                        <div class="col">{{ $region->av_total }} 筆資料</div>
+                        <div class="col">{{ $region->av_count }} 筆資料</div>
                         <div class="w-100"></div>
                         <div class="col-2">電影：</div>
-                        <div class="col">{{ $region->movie_total }} 筆資料</div>
+                        <div class="col">{{ $region->movie_count }} 筆資料</div>
                     </div>
                 @endif
 

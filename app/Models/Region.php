@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Region extends Model
 {
     protected $table = 'region'; // 設定資料表名稱
-    protected $fillable = ['region_name', 'artist_total', 'av_total', 'movie_total'];
+    protected $fillable = ['region_name', 'artist_count', 'av_count', 'movie_count'];
 
     /*
     ** Relationships
@@ -38,6 +38,6 @@ class Region extends Model
     */
     public function getCategoryDataTotalAttribute()
     {
-        return $this->attributes['artist_total'] + $this->attributes['av_total'] + $this->attributes['movie_total'];
+        return $this->attributes['artist_count'] + $this->attributes['av_count'] + $this->attributes['movie_count'];
     }
 }
