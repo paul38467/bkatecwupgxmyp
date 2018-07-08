@@ -99,7 +99,7 @@ class RegionController extends Controller
         // 防止刪除有資料的地區
         if ($region->category_data_total)
         {
-            return back()->with('delete_not_allowed', '此地區存在 '. $region->category_data_total . ' 筆資料，所以無法刪除。');
+            return back();
         }
 
         $region->delete();

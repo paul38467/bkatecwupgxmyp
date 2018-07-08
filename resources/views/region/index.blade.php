@@ -26,11 +26,12 @@
             <thead class="table-success">
                 <tr>
                     <th class="col-md-1" scope="col">地區 ID</th>
-                    <th class="col-md-7" scope="col">地區名稱</th>
-                    <th class="col-md-1" scope="col">藝人</th>
-                    <th class="col-md-1" scope="col">AV</th>
-                    <th class="col-md-1" scope="col">電影</th>
-                    <th class="col-md-1" scope="col">管理</th>
+                    <th class="col-md-6" scope="col">地區名稱</th>
+                    <th class="col-md-1 text-center" scope="col">藝人數量</th>
+                    <th class="col-md-1 text-center" scope="col">AV 數量</th>
+                    <th class="col-md-1 text-center" scope="col">電影數量</th>
+                    <th class="col-md-1 text-center" scope="col">總數量</th>
+                    <th class="col-md-1 text-center" scope="col">管理</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,10 +39,11 @@
                     <tr>
                         <th scope="row">{{ $region->id }}</th>
                         <td><i class="fa fa-flag fa-fw text-success"></i> {{ $region->region_name }}</td>
-                        <td>{{ $region->artist_count }}</td>
-                        <td>{{ $region->av_count }}</td>
-                        <td>{{ $region->movie_count }}</td>
-                        <td>
+                        <td class="text-right">{{ number_format($region->artist_count) }}</td>
+                        <td class="text-right">{{ number_format($region->av_count) }}</td>
+                        <td class="text-right">{{ number_format($region->movie_count) }}</td>
+                        <td class="text-right text-danger">{{ number_format($region->category_data_total) }}</td>
+                        <td class="text-center">
                             <a class="btn btn-primary btn-sm" href="{{ route('region.edit', $region) }}">
                                 <i class="fa fa-edit fa-lg"></i> 編輯
                             </a>
