@@ -44,9 +44,9 @@ class RegionController extends Controller
     {
         Region::create([
             'region_name' => $request->input('region_name'),
-            'artist_count' => 0,
-            'av_count' => 0,
-            'movie_count' => 0,
+            'artist_total' => 0,
+            'av_total' => 0,
+            'movie_total' => 0,
         ]);
 
         return back();

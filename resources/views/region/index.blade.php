@@ -39,9 +39,9 @@
                     <tr>
                         <th scope="row">{{ $region->id }}</th>
                         <td><i class="fa fa-flag fa-fw text-success"></i> {{ $region->region_name }}</td>
-                        <td class="text-right">{{ number_format($region->artist_count) }}</td>
-                        <td class="text-right">{{ number_format($region->av_count) }}</td>
-                        <td class="text-right">{{ number_format($region->movie_count) }}</td>
+                        <td class="text-right">{{ number_format($region->artist_total) }}</td>
+                        <td class="text-right">{{ number_format($region->av_total) }}</td>
+                        <td class="text-right">{{ number_format($region->movie_total) }}</td>
                         <td class="text-right text-danger">{{ number_format($region->category_data_total) }}</td>
                         <td class="text-center">
                             <a class="btn btn-primary btn-sm" href="{{ route('region.edit', $region) }}">
