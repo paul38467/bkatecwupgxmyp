@@ -22,6 +22,7 @@ Route::view('/test-views/test-alert-with', 'test_views.test_alert_with');
 
 Route::resource('region', 'RegionController');
 Route::resource('artist-tagcat', 'ArtistTagcatController');
+Route::resource('artist-tag', 'ArtistTagController');
 
 Auth::routes();
 

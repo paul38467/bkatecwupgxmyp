@@ -43,6 +43,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarManagement">
                     <a class="dropdown-item" href="{{ route('region.index') }}">地區管理</a>
                     <a class="dropdown-item" href="{{ route('artist-tagcat.index') }}">管理藝人的標籤分類</a>
+                    <a class="dropdown-item" href="{{ route('artist-tag.index') }}">管理藝人的標籤</a>
                 </div>
             </li>
 
