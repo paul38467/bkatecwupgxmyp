@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ArtistTagcat extends Model
 {
     protected $table = 'artist_tagcat'; // 設定資料表名稱
-    protected $fillable = ['tagcat_name', 'tag_total'];
+    protected $fillable = ['tagcat_name'];
 
     /*
     ** Relationships

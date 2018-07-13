@@ -36,7 +36,7 @@
                     <tr>
                         <th scope="row">{{ $artist_tagcat->id }}</th>
                         <td><i class="fa fa-tags fa-fw text-success"></i> {{ $artist_tagcat->tagcat_name }}</td>
-                        <td class="text-right text-danger">{{ number_format($artist_tagcat->tag_total) }}</td>
+                        <td class="text-right text-danger">{{ number_format($artist_tagcat->artist_tag_count) }}</td>
                         <td class="text-center">
                             <a class="btn btn-primary btn-sm" href="{{ route('artist-tagcat.edit', $artist_tagcat) }}">
                                 <i class="fa fa-edit fa-lg"></i> 編輯

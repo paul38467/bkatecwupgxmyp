@@ -7,7 +7,7 @@
     @component('components.edit_delete_view')
         @slot('header_edit', '編輯分類')
         @slot('header_delete', '刪除分類')
-        @slot('data_total', $artist_tagcat->tag_total)
+        @slot('data_total', $artist_tagcat->artistTag->count())
         @slot('url_back', route('artist-tagcat.index'))
         @slot('action_update', route('artist-tagcat.update', $artist_tagcat))
         @slot('action_delete', route('artist-tagcat.destroy', $artist_tagcat))
