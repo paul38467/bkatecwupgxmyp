@@ -60,5 +60,6 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'FormInputSingleSpace' => \App\Http\Middleware\FormInputSingleSpace::class,
+        'FormInputRemoveEol' => \App\Http\Middleware\FormInputRemoveEol::class,
     ];
 }
