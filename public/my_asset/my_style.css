@@ -3,6 +3,16 @@ html {
   font-size: 18px;
 }
 
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+.my-link-visited a:visited {
+  color: #920114;
+}
+
 /* ---------------------------------------------------
     Move down content because we have a fixed navbar that is 3.5rem(or 56px) tall
 ----------------------------------------------------- */
@@ -13,7 +23,9 @@ html {
   padding-top: 4.375rem;
 }
 
-/* fix click on anchor, navbar cover anchor */
+/* ---------------------------------------------------
+    fix click on anchor, navbar cover anchor
+----------------------------------------------------- */
 a.anchor {
   display: block;
   position: relative;

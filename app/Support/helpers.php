@@ -40,3 +40,25 @@ if ( ! function_exists('remove_eol'))
         return is_string($var) ? str_replace(["\r", "\n"], "", $var) : $var;
     }
 }
+
+//
+// 使用樣板作比對時，要將路徑裡的 / 轉為 \/
+//
+if ( ! function_exists('path_to_pattern'))
+{
+    function path_to_pattern(string $path)
+    {
+        return str_replace('/', '\/', replace_windows_path($path));
+    }
+}
+
+//
+// 將 Windows 路徑使用的 \ 轉為 /
+//
+if ( ! function_exists('replace_windows_path'))
+{
+    function replace_windows_path(string $path)
+    {
+        return str_replace(DIRECTORY_SEPARATOR, "/", $path);
+    }
+}
