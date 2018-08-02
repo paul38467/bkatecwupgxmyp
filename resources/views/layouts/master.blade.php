@@ -68,15 +68,26 @@
     <!-- bootstrap, bootstrap.bundle.min.js already included popper.min.js -->
     <script src="{{ asset('plugin/bootstrap-4.1.1-dist/js/bootstrap.bundle.min.js') }}"></script>
 
+    @stack('master_script_src')
+
     <script type="text/javascript">
         // if JavaScript enabled, show #bodyWrapper
         $("#bodyWrapper").show();
+
+        // submit button disable on click
+        $(".disable-on-click").click(function() {
+            $(this).prop('disabled', true);
+        });
 
         // Laravel CSRF Token
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
+        });
+
+        $(function() {
+            @stack('master_script')
         });
     </script>
 </body>
