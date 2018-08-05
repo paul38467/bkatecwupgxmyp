@@ -35,7 +35,14 @@ Route::prefix('fetchaa')->name('fetchaa.')->group(function () {
     Route::delete('destroy/{thread}', 'FetchaaController@destroy')->name('destroy');
 });
 
-Route::resource('region', 'RegionController');
+Route::prefix('region')->name('region.')->group(function () {
+    Route::get('/', 'RegionController@index')->name('index');
+    Route::get('edit/{region}', 'RegionController@edit')->name('edit');
+    Route::post('store', 'RegionController@store')->name('store');
+    Route::patch('update/{region}', 'RegionController@update')->name('update');
+    Route::delete('destroy/{region}', 'RegionController@destroy')->name('destroy');
+});
+
 Route::resource('artist-tagcat', 'ArtistTagcatController');
 Route::resource('artist-tag', 'ArtistTagController');
 

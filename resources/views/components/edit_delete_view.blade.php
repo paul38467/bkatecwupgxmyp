@@ -12,7 +12,7 @@
                     <div class="form-group">
                         {{ $slot }}
                     </div>
-                    <button type="submit" class="btn btn-success ml-2">儲存</button>
+                    <button type="submit" class="btn btn-success ml-2 disable-on-click">儲存</button>
                     <a class="btn btn-primary ml-2" href="{{ $url_back }}" role="button">返回</a>
                 </form>
             </div>
@@ -34,7 +34,7 @@
                 @method('DELETE')
                 @csrf
 
-                <button type="submit" class="btn btn-danger"{{ ($data_total) ? ' disabled' : '' }}>刪除</button>
+                <button type="submit" class="btn btn-danger disable-on-click"{{ ($data_total) ? ' disabled' : '' }}>刪除</button>
             </form>
         </div><!-- /.card-body -->
     </div><!-- /.card -->

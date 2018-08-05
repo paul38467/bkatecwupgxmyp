@@ -10,11 +10,12 @@ class RegionController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('FormInputRemoveEol:region_name')->only(['store', 'update']);
         $this->middleware('FormInputSingleSpace:region_name')->only(['store', 'update']);
     }
 
     /**
-     * Display a listing of the resource.
+     * 顯示首頁
      *
      * @return \Illuminate\Http\Response
      */
@@ -25,17 +26,7 @@ class RegionController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        abort(404);
-    }
-
-    /**
-     * Store a newly created resource in storage.
+     * 建立地區
      *
      * @param  StoreRegionRequest  $request
      * @return \Illuminate\Http\Response
@@ -53,18 +44,7 @@ class RegionController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Region  $region
-     * @return \Illuminate\Http\Response
-     */
-    public function show($region)
-    {
-        abort(404);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
+     * 顯示編輯地區的表格
      *
      * @param  \App\Models\Region  $region
      * @return \Illuminate\Http\Response
@@ -75,7 +55,7 @@ class RegionController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * 更新地區
      *
      * @param  StoreRegionRequest  $request
      * @param  \App\Models\Region  $region
@@ -89,7 +69,7 @@ class RegionController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * 刪除地區
      *
      * @param  \App\Models\Region  $region
      * @return \Illuminate\Http\Response

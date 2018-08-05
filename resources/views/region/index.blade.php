@@ -3,7 +3,7 @@
 @section('page_title', '地區管理')
 
 @section('content')
-    <h4 class="pb-2">地區管理</h4>
+    <h5 class="pb-2">地區管理</h5>
     @include('layouts.blocks.errors')
     <form method="POST" action="{{ route('region.store') }}">
         @csrf
@@ -13,9 +13,9 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text">新增地區</span>
                 </div>
-                <input type="text" id="region_name" name="region_name" value="{{ old('region_name') }}" class="form-control" placeholder="輸入地區名稱" aria-label="輸入地區名稱">
+                <input type="text" id="regionRegionName" name="region_name" value="{{ old('region_name') }}" class="form-control" placeholder="輸入地區名稱" aria-label="輸入地區名稱">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="submit">新增</button>
+                    <button class="btn btn-outline-secondary disable-on-click" type="submit">新增</button>
                 </div>
             </div>
         </div>
