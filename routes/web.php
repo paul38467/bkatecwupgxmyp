@@ -43,7 +43,14 @@ Route::prefix('region')->name('region.')->group(function () {
     Route::delete('destroy/{region}', 'RegionController@destroy')->name('destroy');
 });
 
-Route::resource('artist-tagcat', 'ArtistTagcatController');
+Route::prefix('artist-tagcat')->name('artist-tagcat.')->group(function () {
+    Route::get('/', 'ArtistTagcatController@index')->name('index');
+    Route::get('edit/{artist_tagcat}', 'ArtistTagcatController@edit')->name('edit');
+    Route::post('store', 'ArtistTagcatController@store')->name('store');
+    Route::patch('update/{artist_tagcat}', 'ArtistTagcatController@update')->name('update');
+    Route::delete('destroy/{artist_tagcat}', 'ArtistTagcatController@destroy')->name('destroy');
+});
+
 Route::resource('artist-tag', 'ArtistTagController');
 
 Auth::routes();

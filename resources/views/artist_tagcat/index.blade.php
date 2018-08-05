@@ -3,7 +3,7 @@
 @section('page_title', '管理藝人的標籤分類')
 
 @section('content')
-    <h4 class="pb-2">管理藝人的標籤分類</h4>
+    <h5 class="pb-2">管理藝人的標籤分類</h5>
     @include('layouts.blocks.errors')
     <form method="POST" action="{{ route('artist-tagcat.store') }}">
         @csrf
@@ -13,9 +13,9 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text">新增分類</span>
                 </div>
-                <input type="text" id="tagcat_name" name="tagcat_name" value="{{ old('tagcat_name') }}" class="form-control" placeholder="輸入分類名稱" aria-label="輸入分類名稱">
+                <input type="text" id="artistTagcatTagcatName" name="tagcat_name" value="{{ old('tagcat_name') }}" class="form-control" placeholder="輸入分類名稱" aria-label="輸入分類名稱">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="submit">新增</button>
+                    <button class="btn btn-outline-secondary disable-on-click" type="submit">新增</button>
                 </div>
             </div>
         </div>

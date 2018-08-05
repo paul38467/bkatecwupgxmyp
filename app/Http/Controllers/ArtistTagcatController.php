@@ -10,11 +10,12 @@ class ArtistTagcatController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('FormInputRemoveEol:tagcat_name')->only(['store', 'update']);
         $this->middleware('FormInputSingleSpace:tagcat_name')->only(['store', 'update']);
     }
 
     /**
-     * Display a listing of the resource.
+     * 顯示首頁
      *
      * @return \Illuminate\Http\Response
      */
@@ -25,17 +26,7 @@ class ArtistTagcatController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        abort(404);
-    }
-
-    /**
-     * Store a newly created resource in storage.
+     * 建立藝人的標籤分類
      *
      * @param  StoreArtistTagcatRequest  $request
      * @return \Illuminate\Http\Response
@@ -50,18 +41,7 @@ class ArtistTagcatController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\ArtistTagcat  $artist_tagcat
-     * @return \Illuminate\Http\Response
-     */
-    public function show($artist_tagcat)
-    {
-        abort(404);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
+     * 顯示編輯藝人標籤分類的表格
      *
      * @param  \App\Models\ArtistTagcat  $artist_tagcat
      * @return \Illuminate\Http\Response
@@ -72,7 +52,7 @@ class ArtistTagcatController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * 更新藝人的標籤分類
      *
      * @param  StoreArtistTagcatRequest  $request
      * @param  \App\Models\ArtistTagcat  $artist_tagcat
@@ -86,7 +66,7 @@ class ArtistTagcatController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * 刪除藝人的標籤分類
      *
      * @param  \App\Models\ArtistTagcat  $artist_tagcat
      * @return \Illuminate\Http\Response
