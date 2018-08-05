@@ -11,11 +11,12 @@ class ArtistTagController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('FormInputRemoveEol:tag_name')->only(['store', 'update']);
         $this->middleware('FormInputSingleSpace:tag_name')->only(['store', 'update']);
     }
 
     /**
-     * Display a listing of the resource.
+     * 顯示首頁
      *
      * @return \Illuminate\Http\Response
      */
@@ -26,17 +27,7 @@ class ArtistTagController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        abort(404);
-    }
-
-    /**
-     * Store a newly created resource in storage.
+     * 建立藝人的標籤
      *
      * @param  StoreArtistTagRequest  $request
      * @return \Illuminate\Http\Response
@@ -52,18 +43,7 @@ class ArtistTagController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\ArtistTag  $artist_tag
-     * @return \Illuminate\Http\Response
-     */
-    public function show($artist_tag)
-    {
-        abort(404);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
+     * 顯示編輯藝人標籤的表格
      *
      * @param  \App\Models\ArtistTag  $artist_tag
      * @return \Illuminate\Http\Response
@@ -74,7 +54,7 @@ class ArtistTagController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * 更新藝人的標籤
      *
      * @param  StoreArtistTagRequest  $request
      * @param  \App\Models\ArtistTag  $artist_tag
@@ -88,7 +68,7 @@ class ArtistTagController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * 刪除藝人的標籤
      *
      * @param  \App\Models\ArtistTag  $artist_tag
      * @return \Illuminate\Http\Response

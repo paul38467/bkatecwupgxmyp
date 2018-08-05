@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+\Debugbar::disable();
 
 Route::get('/', function () {
     return view('welcome');
@@ -51,7 +52,13 @@ Route::prefix('artist-tagcat')->name('artist-tagcat.')->group(function () {
     Route::delete('destroy/{artist_tagcat}', 'ArtistTagcatController@destroy')->name('destroy');
 });
 
-Route::resource('artist-tag', 'ArtistTagController');
+Route::prefix('artist-tag')->name('artist-tag.')->group(function () {
+    Route::get('/', 'ArtistTagController@index')->name('index');
+    Route::get('edit/{artist_tag}', 'ArtistTagController@edit')->name('edit');
+    Route::post('store', 'ArtistTagController@store')->name('store');
+    Route::patch('update/{artist_tag}', 'ArtistTagController@update')->name('update');
+    Route::delete('destroy/{artist_tag}', 'ArtistTagController@destroy')->name('destroy');
+});
 
 Auth::routes();
 

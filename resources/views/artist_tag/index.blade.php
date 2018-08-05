@@ -3,7 +3,7 @@
 @section('page_title', '管理藝人的標籤')
 
 @section('content')
-    <h4 class="pb-2">管理藝人的標籤</h4>
+    <h5 class="pb-2">管理藝人的標籤</h5>
     @include('layouts.blocks.errors')
 
     @forelse($artist_tagcats as $artist_tagcat)
@@ -17,7 +17,8 @@
                     </div>
                     <input type="text" name="tag_name" value="" class="form-control" placeholder="輸入標籤名稱" aria-label="輸入標籤名稱">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="submit" name="tagcat_id" value="{{ $artist_tagcat->id }}">新增</button>
+                        <input type="hidden" name="tagcat_id" value="{{ $artist_tagcat->id }}">
+                        <button class="btn btn-outline-secondary disable-on-click" type="submit">新增</button>
                     </div>
                 </div>
             </div>
