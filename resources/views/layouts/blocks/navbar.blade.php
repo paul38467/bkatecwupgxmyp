@@ -35,17 +35,6 @@
                 </div>
             </li>
 
-            <!-- navbar dropdown - navbarTestViews -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarTestViews" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Test Views</a>
-                <div class="dropdown-menu" aria-labelledby="navbarTestViews">
-                    <a class="dropdown-item" href="{{ asset('/test-views/test-layouts') }}">test-layouts</a>
-                    <a class="dropdown-item" href="{{ asset('/test-views/test-bdcallout') }}">test-bdcallout</a>
-                    <a class="dropdown-item" href="{{ asset('/test-views/test-alert') }}">test-alert</a>
-                    <a class="dropdown-item" href="{{ asset('/test-views/test-alert-with') }}">test-alert-with</a>
-                </div>
-            </li>
-
             <!-- navbar dropdown - navbarManagement -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarManagement" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">管理</a>
@@ -53,6 +42,11 @@
                     <a class="dropdown-item" href="{{ route('region.index') }}">地區管理</a>
                     <a class="dropdown-item" href="{{ route('artist-tagcat.index') }}">管理藝人的標籤分類</a>
                     <a class="dropdown-item" href="{{ route('artist-tag.index') }}">管理藝人的標籤</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{ asset('/test-views/test-layouts') }}">test-layouts</a>
+                    <a class="dropdown-item" href="{{ asset('/test-views/test-bdcallout') }}">test-bdcallout</a>
+                    <a class="dropdown-item" href="{{ asset('/test-views/test-alert') }}">test-alert</a>
+                    <a class="dropdown-item" href="{{ asset('/test-views/test-alert-with') }}">test-alert-with</a>
                 </div>
             </li>
 
