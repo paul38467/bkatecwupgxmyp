@@ -31,3 +31,5 @@ $RECYCLE.BIN/
 *.msp
 
 /config/cfg.php
+/public/datas
+/app/Traits/Fetch*Data.php

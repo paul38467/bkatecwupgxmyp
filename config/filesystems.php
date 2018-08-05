@@ -55,6 +55,18 @@ return [
             'visibility' => 'public',
         ],
 
+        'fetchaa' => [
+            'driver' => 'local',
+            'root' => config('cfg.fetchaa.storageRoot'),
+        ],
+
+        'fetchaa_images' => [
+            'driver' => 'local',
+            'root' => config('cfg.fetchaaImages.storageRoot'),
+            'url' => env('APP_URL').'/datas/fetchaa-images',
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

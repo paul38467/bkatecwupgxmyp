@@ -13,16 +13,25 @@
                 <a class="nav-link" href="#">Link</a>
             </li>
 
-            <!-- navbar dropdown -->
+            <!-- navbar dropdown - navbarFetchaa -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarFetchaa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fetchaa</a>
+                <div class="dropdown-menu" aria-labelledby="navbarFetchaa">
+                    <a class="dropdown-item" href="{{ route('fetchaa.index') }}">所有文章</a>
+                        @foreach ($cfg['fetchaa']['threadTypes'] as $threadType => $threadTypeVal)
+                            <a class="dropdown-item" href="{{ route('fetchaa.index', ['type' => $threadType]) }}">
+                                {{ $threadTypeVal['label'] }}
+                            </a>
+                        @endforeach
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="{{ route('fetchaa.empty', 'av_icode') }}">沒有 AV-Icode</a>
+                    <a class="dropdown-item" href="{{ route('fetchaa.empty', 'artist') }}">沒有 Artist</a>
+                    <a class="dropdown-item" href="{{ route('fetchaa.empty', 'both') }}">沒有 AV-Icode 及 Artist</a>
+                    <a class="dropdown-item" href="{{ route('fetchaa.dupe-av-icode') }}">重複 AV-Icode</a>
+                    <a class="dropdown-item" href="{{ route('fetchaa.is-focus') }}">關注的文章</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{ route('fetchaa.unread') }}">未檢查的文章</a>
+                    <a class="dropdown-item" href="{{ route('fetchaa.import') }}">匯入資料</a>
                 </div>
             </li>
 
