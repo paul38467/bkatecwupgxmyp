@@ -37,7 +37,7 @@ if ( ! function_exists('remove_eol'))
 {
     function remove_eol($var)
     {
-        return is_string($var) ? str_replace(["\r", "\n"], "", $var) : $var;
+        return is_string($var) ? str_replace(["\r\n", "\r", "\n"], "", $var) : $var;
     }
 }
 
