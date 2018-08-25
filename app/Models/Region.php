@@ -21,19 +21,6 @@ class Region extends Model
     }
 
     /*
-    ** Mutator
-    */
-    public function setCreatedAtAttribute()
-    {
-        $this->attributes['created_at'] = \Carbon\Carbon::parse('-13 year')->toDateTimeString();
-    }
-
-    public function setUpdatedAtAttribute()
-    {
-        $this->attributes['updated_at'] = \Carbon\Carbon::parse('-13 year')->toDateTimeString();
-    }
-
-    /*
     ** Accessor
     */
     public function getCategoryDataTotalAttribute()

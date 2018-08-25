@@ -19,17 +19,4 @@ class ArtistTag extends Model
         // 我這個(表artist_tag) 的 tagcat_id欄位 是屬於 對方(表artist_tagcat) 的 id欄位
         return $this->belongsTo(ArtistTagcat::class, 'tagcat_id');
     }
-
-    /*
-    ** Mutator
-    */
-    public function setCreatedAtAttribute()
-    {
-        $this->attributes['created_at'] = \Carbon\Carbon::parse('-12 year')->toDateTimeString();
-    }
-
-    public function setUpdatedAtAttribute()
-    {
-        $this->attributes['updated_at'] = \Carbon\Carbon::parse('-12 year')->toDateTimeString();
-    }
 }
