@@ -46,6 +46,12 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        // 防止輸入正確 URI 但沒有正確的 Verb時, 所顯示的錯誤畫面 MethodNotAllowedHttpException
+        if ($exception instanceof \Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException) {
+            // return redirect('/');
+            abort(404);
+        }
+
         return parent::render($request, $exception);
     }
 }
