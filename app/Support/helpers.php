@@ -62,3 +62,30 @@ if ( ! function_exists('replace_windows_path'))
         return str_replace(DIRECTORY_SEPARATOR, "/", $path);
     }
 }
+
+//
+// 將一段字串轉為陣列, 移除空元素, 及可選擇是否移除重複的元素
+//
+if ( ! function_exists('string_to_array_filter'))
+{
+    function string_to_array_filter(string $string, $unique = false)
+    {
+        $array = explode("\r\n", $string);
+        $array = array_map(function($value) {
+                    return trim(single_space($value));
+                 }, $array);
+        $array = array_filter($array);
+        return $unique ? array_unique($array) : $array;
+    }
+}
+
+//
+// 在 blade 顯示正確的 textarea 欄位文字
+//
+if ( ! function_exists('show_textarea'))
+{
+    function show_textarea(string $text)
+    {
+        return nl2br(e($text));
+    }
+}
