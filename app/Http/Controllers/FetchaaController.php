@@ -279,11 +279,7 @@ class FetchaaController extends Controller
                 // 產生 clearCode
                 $clearCode = implode("\r\n", $htmlCodes);
                 $clearCode = strip_tags($clearCode); // 移除所有 html tag
-                $clearCodes = explode("\r\n", $clearCode);
-                $clearCodes = array_map(function($line) {
-                                return trim(single_space($line));
-                              }, $clearCodes);
-                $clearCodes = array_filter($clearCodes); // 移除空行
+                $clearCodes = string_to_array_filter($clearCode);
                 $clearCode = implode("\r\n", $clearCodes); // 轉為 string, 現在已經可以直接儲存至資料庫, 無需再作處理
             }
 
