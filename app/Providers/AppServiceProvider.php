@@ -16,6 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         View::share('cfg', config('cfg'));
+        \Carbon\Carbon::setLocale('zh_TW'); // for use ->diffForHumans()
     }
 
     /**
