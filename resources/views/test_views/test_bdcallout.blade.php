@@ -162,3 +162,9 @@
     </div>
 </div><!-- /.container -->
 @endsection
+
+@push('master_css')
+    <!-- Bootstrap Document bdcallout CSS -->
+    <link rel="stylesheet" href="/my_asset/bootstrap-4.1.1-bdcallout.css">
+
+@endpush
