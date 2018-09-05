@@ -16,11 +16,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/test-views/test-layouts', 'test_views.test_layouts');
-Route::view('/test-views/test-bdcallout', 'test_views.test_bdcallout');
-Route::view('/test-views/test-alert', 'test_views.test_alert');
-Route::view('/test-views/test-alert-with', 'test_views.test_alert_with');
-
 Route::prefix('fetchaa')->name('fetchaa.')->group(function () {
     Route::get('/', 'FetchaaController@index')->name('index');
     Route::get('empty/{field}', 'FetchaaController@empty')->where('field', '(av_icode|artist|both)')->name('empty');
@@ -59,6 +54,13 @@ Route::prefix('artist-tag')->name('artist-tag.')->group(function () {
     Route::patch('update/{artist_tag}', 'ArtistTagController@update')->name('update');
     Route::delete('destroy/{artist_tag}', 'ArtistTagController@destroy')->name('destroy');
 });
+
+Route::view('/test-views/test-layouts', 'test_views.test_layouts');
+Route::view('/test-views/test-bdcallout', 'test_views.test_bdcallout');
+Route::view('/test-views/test-mycallout', 'test_views.test_mycallout');
+Route::view('/test-views/test-alert', 'test_views.test_alert');
+Route::view('/test-views/test-alert-with', 'test_views.test_alert_with');
+
 
 Auth::routes();
 

@@ -9,9 +9,6 @@
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
 
             <!-- navbar dropdown - navbarFetchaa -->
             <li class="nav-item dropdown">
@@ -45,6 +42,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ asset('/test-views/test-layouts') }}">test-layouts</a>
                     <a class="dropdown-item" href="{{ asset('/test-views/test-bdcallout') }}">test-bdcallout</a>
+                    <a class="dropdown-item" href="{{ asset('/test-views/test-mycallout') }}">test-mycallout</a>
                     <a class="dropdown-item" href="{{ asset('/test-views/test-alert') }}">test-alert</a>
                     <a class="dropdown-item" href="{{ asset('/test-views/test-alert-with') }}">test-alert-with</a>
                 </div>

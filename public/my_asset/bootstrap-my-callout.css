@@ -1,0 +1,151 @@
+/*!
+ * bootstrap-my-callout.css
+ *
+ * modify by Bootstrap Document v4.1.1 bdcallout
+ * Types Color: primary, secondary, success, info, warning, danger
+ * Colors     : blue, indigo, purple, pink, red, orange, yellow, green, teal, cyan, dark
+ */
+.my-callout {
+  padding: 0.75rem;
+/*!  margin-bottom: 1.25rem; */
+  border: 1px solid #eee;
+  border-top-width: .25rem;
+  border-radius: .25rem
+}
+.my-callout p,h5 {
+  margin-top: 0;
+  margin-bottom: .25rem
+}
+.my-callout p:last-child {
+  margin-bottom: 0
+}
+.my-callout code {
+  border-radius: .25rem
+}
+
+.my-callout+.my-callout {
+  margin-top: -.25rem
+}
+
+/*! Types Color*/
+.my-callout-primary {
+  border-top-color: #428bca
+}
+.my-callout-primary i,
+.my-callout-primary h5 {
+  color: #428bca
+}
+.my-callout-secondary {
+  border-top-color: #6c757d
+}
+.my-callout-secondary i,
+.my-callout-secondary h5 {
+  color: #6c757d
+}
+.my-callout-success {
+  border-top-color: #5cb85c
+}
+.my-callout-success i,
+.my-callout-success h5 {
+  color: #5cb85c
+}
+.my-callout-info {
+  border-top-color: #5bc0de
+}
+.my-callout-info i,
+.my-callout-info h5 {
+  color: #5bc0de
+}
+.my-callout-warning {
+  border-top-color: #f0ad4e
+}
+.my-callout-warning i,
+.my-callout-warning h5 {
+  color: #f0ad4e
+}
+.my-callout-danger {
+  border-top-color: #d9534f
+}
+.my-callout-danger i,
+.my-callout-danger h5 {
+  color: #d9534f
+}
+
+/*! Colors */
+.my-callout-blue {
+  border-top-color: #007bff
+}
+.my-callout-blue i,
+.my-callout-blue h5 {
+  color: #007bff
+}
+.my-callout-indigo {
+  border-top-color: #6610f2
+}
+.my-callout-indigo i,
+.my-callout-indigo h5 {
+  color: #6610f2
+}
+.my-callout-purple {
+  border-top-color: #6f42c1
+}
+.my-callout-purple i,
+.my-callout-purple h5 {
+  color: #6f42c1
+}
+.my-callout-pink {
+  border-top-color: #e83e8c
+}
+.my-callout-pink i,
+.my-callout-pink h5 {
+  color: #e83e8c
+}
+.my-callout-red {
+  border-top-color: #dc3545
+}
+.my-callout-red i,
+.my-callout-red h5 {
+  color: #dc3545
+}
+.my-callout-orange {
+  border-top-color: #fd7e14
+}
+.my-callout-orange i,
+.my-callout-orange h5 {
+  color: #fd7e14
+}
+.my-callout-yellow {
+  border-top-color: #ffc107
+}
+.my-callout-yellow i,
+.my-callout-yellow h5 {
+  color: #ffc107
+}
+.my-callout-green {
+  border-top-color: #28a745
+}
+.my-callout-green i,
+.my-callout-green h5 {
+  color: #28a745
+}
+.my-callout-teal {
+  border-top-color: #20c997
+}
+.my-callout-teal i,
+.my-callout-teal h5 {
+  color: #20c997
+}
+.my-callout-cyan {
+  border-top-color: #17a2b8
+}
+.my-callout-cyan i,
+.my-callout-cyan h5 {
+  color: #17a2b8
+}
+.my-callout-dark {
+  border-top-color: #343a40
+}
+.my-callout-dark i,
+.my-callout-dark h5 {
+  color: #343a40
+}
