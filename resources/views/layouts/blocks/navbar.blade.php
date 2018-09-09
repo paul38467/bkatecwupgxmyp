@@ -10,6 +10,16 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
 
+            <!-- navbar dropdown - navbarArtist -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarArtist" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">藝人</a>
+                <div class="dropdown-menu" aria-labelledby="navbarArtist">
+                    <a class="dropdown-item" href="{{ route('artist.index') }}">所有藝人</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{ route('artist.create') }}">新增藝人</a>
+                </div>
+            </li>
+
             <!-- navbar dropdown - navbarFetchaa -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarFetchaa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fetchaa</a>

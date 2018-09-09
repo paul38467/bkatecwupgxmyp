@@ -10,16 +10,15 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ asset('plugin/bootstrap-4.1.1-dist/css/bootstrap.min.css') }}">
-
-    <!-- Bootstrap Document bdcallout CSS -->
-    <link rel="stylesheet" href="{{ asset('my_asset/bootstrap-4.1.1-bdcallout.css') }}">
+    <link rel="stylesheet" href="/plugin/bootstrap-4.1.1-dist/css/bootstrap.min.css">
 
     <!-- Font Awesome 4.7.0 -->
-    <link rel="stylesheet" href="{{ asset('plugin/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="/plugin/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    @stack('master_css')
 
     <!-- my_style.css -->
-    <link rel="stylesheet" href="{{ asset('my_asset/my_style.css') }}">
+    <link rel="stylesheet" href="/my_asset/my_style.css">
 
     <title>{{ config('app.name') }} - @yield('page_title')</title>
     <link rel="shortcut icon" href="/favicon.ico">
@@ -63,10 +62,10 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
     <!-- jquery-3.3.1 -->
-    <script src="{{ asset('plugin/jquery-3.3.1/jquery-3.3.1.min.js') }}"></script>
+    <script src="/plugin/jquery-3.3.1/jquery-3.3.1.min.js"></script>
 
     <!-- bootstrap, bootstrap.bundle.min.js already included popper.min.js -->
-    <script src="{{ asset('plugin/bootstrap-4.1.1-dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="/plugin/bootstrap-4.1.1-dist/js/bootstrap.bundle.min.js"></script>
 
     @stack('master_script_src')
 

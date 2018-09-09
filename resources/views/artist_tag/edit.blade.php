@@ -7,8 +7,7 @@
     @component('components.edit_delete_view')
         @slot('header_edit', '編輯標籤')
         @slot('header_delete', '刪除標籤')
-        {{-- 將來要在 data_total (填上使用這個標籤的藝人數量) --}}
-        @slot('data_total', 0)
+        @slot('data_total', $artist_tag->artist->count())
         @slot('url_back', route('artist-tag.index'))
         @slot('action_update', route('artist-tag.update', $artist_tag))
         @slot('action_delete', route('artist-tag.destroy', $artist_tag))

@@ -16,6 +16,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::prefix('artist')->name('artist.')->group(function () {
+    Route::get('/', 'ArtistController@index')->name('index');
+    Route::get('create', 'ArtistController@create')->name('create');
+    Route::get('show/{artist}', 'ArtistController@show')->name('show');
+    Route::get('edit/{artist}', 'ArtistController@edit')->name('edit');
+    Route::post('store', 'ArtistController@store')->name('store');
+    Route::patch('update-tags/{artist}', 'ArtistController@updateTags')->name('update-tags');
+    Route::patch('update/{artist}', 'ArtistController@update')->name('update');
+    Route::delete('destroy/{artist}', 'ArtistController@destroy')->name('destroy');
+});
+
 Route::prefix('fetchaa')->name('fetchaa.')->group(function () {
     Route::get('/', 'FetchaaController@index')->name('index');
     Route::get('empty/{field}', 'FetchaaController@empty')->where('field', '(av_icode|artist|both)')->name('empty');

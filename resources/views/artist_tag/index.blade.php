@@ -40,8 +40,7 @@
                         <th scope="row">{{ $artist_tag->id }}</th>
                         <td>{{ $artist_tagcat->tagcat_name }}</td>
                         <td><i class="fa fa-tag fa-fw text-success"></i> {{ $artist_tag->tag_name }}</td>
-                        {{-- 將來要在 number_format(填上使用這個標籤的藝人數量) --}}
-                        <td class="text-right text-danger">{{ number_format('0') }}</td>
+                        <td class="text-right text-danger">{{ number_format($artist_tag->artist->count()) }}</td>
                         <td class="text-center">
                             <a class="btn btn-primary btn-sm" href="{{ route('artist-tag.edit', $artist_tag) }}">
                                 <i class="fa fa-edit fa-lg"></i> 編輯

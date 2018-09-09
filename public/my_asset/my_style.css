@@ -1,5 +1,5 @@
 html {
-  /* Bootstrap 4 Default font-size is 16px */
+  /*! Bootstrap 4 Default font-size is 16px */
   font-size: 18px;
 }
 
@@ -13,9 +13,11 @@ a:focus {
   color: #920114;
 }
 
-/* ---------------------------------------------------
-    Move down content because we have a fixed navbar that is 3.5rem(or 56px) tall
------------------------------------------------------ */
+.my-display-none {
+  display: none;
+}
+
+/*! Move down content because we have a fixed navbar that is 3.5rem(or 56px) tall */
 .my-sidebar-pt {
   padding-top: 3.5rem;
 }
@@ -23,12 +25,155 @@ a:focus {
   padding-top: 4.375rem;
 }
 
-/* ---------------------------------------------------
-    fix click on anchor, navbar cover anchor
------------------------------------------------------ */
+/*! fix click on anchor, navbar cover anchor */
 a.anchor {
   display: block;
   position: relative;
   top: -4.375rem;
   visibility: hidden;
+}
+
+/*! set the hr height and with color */
+.my-hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 4px;
+  color: #17a2b8;
+  background-color: #17a2b8;
+  border: none;
+}
+
+/*! Artist profile, set aka_name textarea */
+.my-textarea-pre {
+  white-space: pre;
+}
+
+/*! my-badge font-size, font-family*/
+.my-badge {
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+/*! Artist profile > tag modal, set the button active style */
+.my-button-checkbox .active {
+  color: white !important;
+  background-color: #428bca !important;
+  border-color: #428bca !important;
+}
+
+/*!
+  Bootstrap Card
+*/
+/*! if card set bg-light, fix the tag color */
+.card.bg-light .nav-tabs .nav-link.active {
+  background-color: #f8f9fa;
+  border-color: #dee2e6 #dee2e6 #f8f9fa;
+}
+/*! Card Navigation, set a div pull right */
+.my-card-nav-pull-right {
+  display: block;
+  padding: .5rem 1rem;
+}
+
+/*!
+  Artist Card
+*/
+.my-card-body {
+  border-top-style: solid;
+  border-top-width: 10px;
+  padding: 0.45rem;
+  line-height: 0.6;
+}
+.my-card-bar-color-1 {
+  border-top-color: #28a745;
+}
+.my-card-bar-color-2 {
+  border-top-color: #f0ad4e;
+}
+.my-card-bar-color-3 {
+  border-top-color: #343a40;
+}
+.my-fav {
+  background-color: #D1E0D1; /*! green #E9F0E8 , #D1E0D1 , #C4D7C4 , ECF0F5 */
+}
+/*! Artist avatar card, set the age badge */
+.my-card-age-badge {
+  position: absolute;
+  font-family: "Open Sans", "文泉驛正黑", "WenQuanYi Zen Hei", "微軟正黑體", "Microsoft JhengHei", Arial, sans-serif;
+  top: -12px;
+  right: -10px;
+  z-index: 1;
+}
+
+/*!
+  For Plug-in jquery-bar-rating-master
+*/
+.my-bar-rating .br-theme-fontawesome-stars .br-widget a {
+  font-size: 2rem;
+}
+.my-grade-stars {
+  color: #edb867;
+}
+
+/*!
+  override Bootstrap form placeholder
+*/
+.form-control::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 0.5;
+}
+.form-control::-moz-placeholder {
+  color: #6c757d;
+  opacity: 0.5;
+}
+.form-control:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 0.5;
+}
+.form-control::-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 0.5;
+}
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 0.5;
+}
+
+/*!
+  Bootstrap - 5 columns grid
+  ref to: https://blog.polarbits.co/2014/02/16/quick-tips-5-column-layout-with-twitter-bootstrap/
+*/
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-xs-15 {
+  width: 20%;
+  float: left;
+}
+
+@media (min-width: 768px) {
+  .col-sm-15 {
+    width: 20%;
+    float: left;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-15 {
+    width: 20%;
+    float: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-lg-15 {
+    width: 20%;
+    float: left;
+  }
 }

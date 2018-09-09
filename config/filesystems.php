@@ -55,6 +55,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'artist' => [
+            'driver' => 'local',
+            'root' => config('cfg.artist.storageRoot'),
+            'url' => env('APP_URL').'/datas/artist',
+            'visibility' => 'public',
+        ],
+
         'fetchaa' => [
             'driver' => 'local',
             'root' => config('cfg.fetchaa.storageRoot'),

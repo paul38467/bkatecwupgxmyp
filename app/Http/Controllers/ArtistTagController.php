@@ -22,7 +22,7 @@ class ArtistTagController extends Controller
      */
     public function index()
     {
-        $artist_tagcats = ArtistTagcat::with('artistTag')->get();
+        $artist_tagcats = ArtistTagcat::with('artistTag.artist')->get();
         return view('artist_tag.index', compact('artist_tagcats'));
     }
 
@@ -76,10 +76,10 @@ class ArtistTagController extends Controller
     public function destroy(ArtistTag $artist_tag)
     {
         // 防止刪除此標籤，如果有藝人正在使用此標籤
-        // if ('將來填入有多少藝人使用此標籤')
-        // {
-        //     return back();
-        // }
+        if ($artist_tag->artist->count())
+        {
+            return back();
+        }
 
         $artist_tag->delete();
         return redirect()->route('artist-tag.index');
